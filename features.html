@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+	background-image: linear-gradient(to right top, #8bd090, #6ad3ae, #53d3cb, #55d0e2, #70cbf0);
+}
+.projcard-container {
+	margin: 50px 0;
+}
+
+
+.projcard-container,
+.projcard-container * {
+	box-sizing: border-box;
+}
+.projcard-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+.projcard {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	font-size: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+	box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+	transform: translate(0px, -3px);
+}
+.projcard::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+	background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.projcard-img {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+	top: 0;
+	left: 0;
+	transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+	left: initial;
+	right: 0;
+}
+.projcard:hover .projcard-img {
+	transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+	width: 70px;
+}
+.projcard-textbox {
+	position: absolute;
+	top: 7%;
+	bottom: 7%;
+	left: 430px;
+	width: calc(100% - 470px);
+	font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+	left: initial;
+	right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: #ff0000bb;
+	background: #fff;
+	top: -20%;
+	left: -55px;
+	height: 140%;
+	width: 60px;
+	transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+	display: none;
+}
+.projcard-textbox::after {
+	display: none;
+	left: initial;
+	right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+	display: block;
+}
+.projcard-textbox * {
+	position: relative;
+}
+.projcard-title {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	font-size: 24px;
+}
+.projcard-subtitle {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	color: #888;
+}
+.projcard-bar {
+	left: -2px;
+	width: 50px;
+	height: 5px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #424242;
+	transition: width 0.2s ease;
+}
+
+.projcard-tagbox {
+	position: absolute;
+	bottom: 3%;
+	font-size: 14px;
+	cursor: default;
+	user-select: none;
+	pointer-events: none;
+}
+.projcard-tag {
+	display: inline-block;
+	background: #E0E0E0;
+	color: #777;
+	border-radius: 3px 0 0 3px;
+	line-height: 26px;
+	padding: 0 10px 0 23px;
+	position: relative;
+	margin-right: 20px;
+	cursor: default;
+	user-select: none;
+	transition: color 0.2s;
+}
+.projcard-tag::before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+	height: 6px;
+	left: 10px;
+	width: 6px;
+	top: 10px;
+}
+.projcard-tag::after {
+	content: '';
+	position: absolute;
+	border-bottom: 13px solid transparent;
+	border-left: 10px solid #E0E0E0;
+	border-top: 13px solid transparent;
+	right: -10px;
+	top: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="projcard-container">
+		
+        <div class="projcard projcard-blue">
+            <div class="projcard-innerbox">
+    <a href="bmi2.html">      	<img class="projcard-img" src="https://www.shutterstock.com/image-vector/bmi-body-mass-index-banner-260nw-1341869564.jpg" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">BMI CALCULATOR</div>
+                    <div class="projcard-subtitle">Calculate your BMI and plan your diet acccordingly</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Body Mass Index (BMI) is a numerical value derived from a person’s weight and height, used to classify their weight category (e.g., underweight, healthy, overweight). It is a simple screening tool but doesn't account for factors like muscle mass or body composition.<div class="projcard-tagbox">
+            t.</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-red">
+            <div class="projcard-innerbox">
+        <a href="nutri.html"   >    <img class="projcard-img" src="https://media.istockphoto.com/id/2155532154/vector/calorie-counting-food-tracking-and-nutrition-planning-in-mobile-app-of-tiny-people.jpg?s=612x612&w=0&k=20&c=w1hoGpPWlD9Kh3S1ezC0ZML8Am_Bhv_m8dizD3RKE1E=" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">NUTRITION TRACKER</div>
+                    <div class="projcard-subtitle">Fuel Your Body, Track Your Progress 🌱✨</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">A nutrition tracker helps you monitor your daily intake of calories, nutrients, and hydration, making it easier to achieve your health goals. Stay on top of your wellness journey with informed choices! 🌿📊</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-green">
+            <div class="projcard-innerbox">
+           <a href="recipe.html">     <img class="projcard-img" src="https://c8.alamy.com/comp/2JF9D13/collage-with-different-tasty-dishes-and-magnifier-with-text-recipe-search-on-white-background-2JF9D13.jpg" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">DIET RECIPIES</div>
+                    <div class="projcard-subtitle">Savor the flavor of health! 🥗✨ Delicious recipes crafted to nourish your body and soul</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Discover the art of healthy eating with recipes that blend taste and nutrition. Fuel your body with wholesome, delicious meals every day! 🥦🍳					</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

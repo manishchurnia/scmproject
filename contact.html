@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nutrinourish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: "Faculty Glyphic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        } 
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color:rgb(97, 168, 97) ;
+            color: white;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            flex-wrap: wrap;
+            
+        }
+        .contact-image {
+            width: 45%;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+    
+
+        
+        
+        form {
+            background-color: white;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: rgb(97, 168, 97);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: rgb(63, 139, 63);
+        }
+        footer {
+            background-color: rgb(97, 168, 97);
+            text-align: center;
+            padding: 10px;
+            background-color:gre;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .contact-image {
+                width: 100%; 
+                margin-right: 0; 
+                margin-bottom: 20px; 
+            }
+            .container {
+                flex-direction: column; 
+                align-items: center; 
+            }
+        }
+        .goggleform{
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer {
+  background-color: rgb(63, 139, 63);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ 
+            
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p><strong>Have Questions? We’ve Got Answers!</strong></p>
+        <p>If you have any questions, comments, or suggestions, please fill out the form below or use one of our contact methods. Our team is here to help you with anything you need!</p>
+    </header>
+    
+    <main class="container">
+        <img src="https://img.freepik.com/free-photo/different-vegetables-seeds-fruits-table-flat-lay-top-view_1150-42321.jpg" alt="Contact Us" class="contact-image">
+    
+        
+        <form id="contactForm" aria-labelledby="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact No:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="name">
+
+            </select>
+            <button>Submit</button>
+           
+           <div class="goggleform">
+            <a href="https://docs.google.com/forms/d/1wee_dfJX9ofbOKC8v4IQal2tXClmPQzUovv07u4E_HA/edit">Feedback Form</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Your Website Name. All Rights Reserved.</p>
+          <ul class="footer-links">
+            <li><a href="nutri.html">Tracker</a></li>
+            <li><a href="welcome.html">Home</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for your message! We'll get back to you soon.");
+        });
+    </script>
+</body>
+</html>
