@@ -212,6 +212,7 @@ nav {
 
   .nav__links a:hover {
     border-color: var(--secondary-color);
+    color: red;
   }
 
   .nav__btns {
@@ -423,5 +424,6 @@ body
         margin-bottom: 10px;
         margin-left: -40px;
         text-align: center;
+        color:#0a0a0a;
     }
 }
