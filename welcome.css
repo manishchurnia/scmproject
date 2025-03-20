@@ -108,8 +108,9 @@ nav {
   color: var(--secondary-color);
 }
 
-.nav__btns {
-  display: none;
+.nav__btns :hover {
+  text-decoration: underline;
+
 }
 
 .header__container {
