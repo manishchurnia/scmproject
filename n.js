@@ -28,6 +28,7 @@ function showError(message) {
         errorDiv = document.createElement('div');
         errorDiv.id = 'error-message';
         errorDiv.style.color = 'red';
+        errorDiv.setAttribute('aria-live', 'polite'); // Accessibility
         document.getElementById('food-form').appendChild(errorDiv);
     }
     errorDiv.textContent = message;
@@ -40,32 +41,26 @@ function clearError() {
     }
 }
 
-
 let totalCalories = 0;
 
 function addFoodItem(name, calories) {
-    // Create list item for the food log
     const foodItem = document.createElement('li');
     foodItem.innerHTML = `${name} - ${calories} kcal <button class="remove-btn">Remove</button>`;
 
-    // Add the item to the list
+    // Style highlight animation
+    foodItem.style.transition = 'background-color 0.3s';
+    foodItem.style.backgroundColor = '#e0ffe0';
+    setTimeout(() => foodItem.style.backgroundColor = '', 500);
+
     document.getElementById('food-list').appendChild(foodItem);
 
-    // Update total calories
     totalCalories += calories;
     document.getElementById('total-calories').textContent = totalCalories;
 
-    // Add event listener to remove button
-foodItem.querySelector('.remove-btn').addEventListener('click', function() {
-    foodItem.remove();
-
-    // Ensure totalCalories is properly updated and does not go negative
-    totalCalories = Math.max(0, totalCalories - calories);
-    
-    const totalCaloriesElement = document.getElementById('total-calories');
-    if (totalCaloriesElement) {
-        totalCaloriesElement.textContent = totalCalories;
-    }
-
+    foodItem.querySelector('.remove-btn').addEventListener('click', function () {
+        foodItem.remove();
+        totalCalories = Math.max(0, totalCalories - calories);
+        document.getElementById('total-calories').textContent = totalCalories;
     });
 }
+

@@ -14,17 +14,17 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(to left bottom, #ff7c7c, #ffb07c, #fff27c, #caff85, #85ffb8);
 }
 
 .container {
   position: relative;
   max-width: 850px;
   width: 100%;
-  background: #fff;
+  background: #f0f4f8;
   padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  perspective: 2700px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .container .cover {
