@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-    <link rel="stylesheet" href="bmi.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="bmi.css"/>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>BMI Calculator</h1>
-        
-        <div class="unit-selection">
-            <h3>Select Units:</h3>
-            <label>
-                <input type="radio" name="weightUnit" value="lbs" checked> Pounds (lbs)
-            </label>
-            <label>
-                <input type="radio" name="weightUnit" value="kg"> Kilograms (kg)
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="heightUnit" value="feet" checked> Feet/Inches
-            </label>
-            <label>
-                <input type="radio" name="heightUnit" value="meters"> Meters
-            </label>
-        </div>
-        <div class="input-container">
-            <label for="weight">Weight:</label>
-            <input type="number" id="weight" placeholder="Enter your weight" required>
-        </div>
-        
-        <div class="input-container" id="heightFeetContainer">
-            <label for="heightFeet">Height (feet):</label>
-            <input type="number" id="heightFeet" placeholder="Feet" required>
-        </div>
-        <div class="input-container" id="heightInchesContainer">
-            <label for="heightInches">Height (inches):</label>
-            <input type="number" id="heightInches" placeholder="Inches" required>
-        </div>
-        <div class="input-container" id="heightMetersContainer" style="display: none;">
-            <label for="heightMeters">Height (meters):</label>
-            <input type="number" id="heightMeters" placeholder="Enter your height in meters" required>
-        </div>
+  <div class="wrapper">
+    <h1>BMI Calculator</h1>
 
-        <button id="calculateBtn">Calculate BMI</button>
-        <h2 id="result"></h2>
+    <div class="unit-selection">
+      <h3>Select Units:</h3>
+      <fieldset>
+        <legend>Weight Unit</legend>
+        <label for="lbs">
+          <input type="radio" name="weightUnit" id="lbs" value="lbs" checked />
+          Pounds (lbs)
+        </label>
+        <label for="kg">
+          <input type="radio" name="weightUnit" id="kg" value="kg" />
+          Kilograms (kg)
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Height Unit</legend>
+        <label for="feet">
+          <input type="radio" name="heightUnit" id="feet" value="feet" checked />
+          Feet/Inches
+        </label>
+        <label for="meters">
+          <input type="radio" name="heightUnit" id="meters" value="meters" />
+          Meters
+        </label>
+      </fieldset>
     </div>
-    <script src="bmi.js"></script>
+
+    <div class="input-container">
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" placeholder="Enter your weight" required />
+    </div>
+
+    <div class="input-container" id="heightFeetContainer">
+      <label for="heightFeet">Height (feet):</label>
+      <input type="number" id="heightFeet" placeholder="Feet" required />
+    </div>
+
+    <div class="input-container" id="heightInchesContainer">
+      <label for="heightInches">Height (inches):</label>
+      <input type="number" id="heightInches" placeholder="Inches" required />
+    </div>
+
+    <div class="input-container" id="heightMetersContainer" style="display: none;">
+      <label for="heightMeters">Height (meters):</label>
+      <input type="number" id="heightMeters" placeholder="Enter your height in meters" required />
+    </div>
+
+    <button id="calculateBtn">Calculate BMI</button>
+    <h2 id="result"></h2>
+  </div>
+
+  <script src="bmi.js"></script>
 </body>
 </html>
