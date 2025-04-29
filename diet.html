@@ -140,118 +140,158 @@
         }
 
         section#recipe {
-            background: var(--color-bg);
-            color: var(--color-primary);
-            font-family: "Playfair Display", serif;
-            font-size: 18px;
-            line-height: 160%;
-        }
+    background: var(--color-bg);
+    color: var(--color-primary);
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 80px;
+}
 
-        section#recipe .overview {
-            border: 1px solid red;
-            width: 100%;
-        }
+section#recipe h1 {
+    padding-bottom: 56px;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        section#recipe .description {
-            width: 100%;
-            padding: 40px 0;
-        }
+section#recipe .overview {
+    border: 1px solid red; /* Temporary style for debugging */
+    width: 100%;
+}
 
-        section#recipe .recipe_details {
-            width: 100%;
-        }
+section#recipe .description {
+    width: 100%;
+    padding: 40px 0;
+}
 
-        section#recipe {
-            padding: 80px;
-        }
+section#recipe .recipe_details {
+    width: 100%;
+}
 
-        section#recipe h1 {
-            padding-bottom: 56px;
-        }
+section#recipe .recipe_details ul {
+    list-style: none;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+    margin: 0;
+}
 
-        section#recipe .recipe_details ul {
-            list-style: none;
-            background: var(--color-primary);
-            color: var(--color-accent);
-            display: flex;
-            padding: 24px 0;
-        }
+section#recipe .recipe_details ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    padding: 0 10px;
+}
 
-        section#recipe .recipe_details ul li {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-family: "Playfair Display", serif;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 2px;
-            font-style: italic;
-        }
+section#recipe .recipe_details ul li span,
+section#recipe .recipe-content > div > h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        section#recipe .recipe_details ul li span,
-        section#recipe .recipe-content>div>h2 {
-            font-family: "Lato", serif;
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-style: normal;
-        }
+section#recipe .recipe-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 56px;
+}
 
-        section#recipe .recipe-content {
-            width: 100%;
-            display: flex;
-            margin-top: 56px;
-        }
+section#recipe .recipe-content > div {
+    width: 50%;
+    padding: 0 20px;
+}
 
-        section#recipe .recipe-content>div {
-            width: 50%;
-        }
+section#recipe .recipe-content > div > h2 {
+    margin-bottom: 32px;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--color-primary);
+}
 
-        section#recipe .recipe-content>div>h2 {
-            margin-bottom: 32px;
-        }
+section#recipe .recipe-content .ing-list,
+section#recipe .recipe-content .recipe-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
 
-        section#recipe .recipe-content .ing-list {
-            padding-right: 56px;
-            display: flex;
-            flex-direction: column;
-        }
+section#recipe .recipe-content .ing-list {
+    padding-right: 56px;
+}
 
-        section#recipe .recipe-content .recipe-list {
-            padding-left: 56px;
-        }
+section#recipe .recipe-content .recipe-list {
+    padding-left: 56px;
+}
 
-        section#recipe .recipe-content>div>h2 {
-            font-weight: 900;
-        }
+section#recipe .recipe-content .ingredients {
+    margin-bottom: 24px;
+}
 
-        section#recipe .recipe-content>div:first-of-type {
-            border-right: 1px solid var(--color-primary);
-        }
+section#recipe .recipe-content .ing-list figure img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
 
-        section#recipe .recipe-content .ingredients {
-            margin-bottom: 24px;
-        }
+section#recipe .recipe-content .ing-list figure {
+    width: 100%;
+    flex: 1;
+    position: relative;
+}
 
-        section#recipe .recipe-content .ing-list figure img {
-            width: 100%;
-        }
+section#recipe .recipe-content .recipe-list ul {
+    list-style: none;
+    padding: 0;
+}
 
-        section#recipe .recipe-content .ing-list figure {
-            width: 100%;
-            flex: 1;
-            position: relative;
-        }
+section#recipe .recipe-content .recipe-list ul li {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-secondary);
+}
 
-        section#recipe .recipe-content .ing-list figure img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
+@media (max-width: 768px) {
+    section#recipe .recipe-content > div {
+        width: 100%;
+        padding: 0;
+    }
+
+    section#recipe .recipe-content {
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    section#recipe .recipe-details ul li {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    section#recipe .recipe-content .ing-list {
+        padding-right: 0;
+    }
+
+    section#recipe .recipe-content .recipe-list {
+        padding-left: 0;
+    }
+}
 
         p.variation {
             font-size: 16px;
