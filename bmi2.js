@@ -74,7 +74,6 @@ function handleCalculate() {
 
 document.getElementById(CALCULATE_BTN_ID).addEventListener('click', handleCalculate);
 
-// Show/hide height input fields based on selected height unit
 document.querySelectorAll('input[name="heightUnit"]').forEach((input) => {
     input.addEventListener('change', function() {
         const isFeet = this.value === 'feet';
@@ -84,12 +83,11 @@ document.querySelectorAll('input[name="heightUnit"]').forEach((input) => {
     });
 });
 
-// Show/hide weight input field based on selected weight unit
 document.querySelectorAll('input[name="weightUnit"]').forEach((input) => {
     input.addEventListener('change', function() {
         const weightInput = document.getElementById(WEIGHT_INPUT_ID);
         weightInput.placeholder = this.value === 'lbs' ? "Enter your weight in lbs" : "Enter your weight in kg";
     });
 });
-//hfduiee~~~kjbkjakfjajbae
+
 
